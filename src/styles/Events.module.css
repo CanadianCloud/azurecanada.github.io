@@ -1,0 +1,242 @@
+body {
+  font-family: 'Outfit', sans-serif; /* Set font family to Outfit */
+}
+
+.events {
+  background-color: #f9f9f9; /* Updated background color to #1C1C1C */
+  color:  #333537; /* Updated text color in the events section to #F8F8F8 */
+  padding: 80px;
+  text-align: center;
+  padding-bottom: 150px;
+  padding-bottom: 40px; /* Add padding to the bottom of the events section */
+}
+
+.events h2 {
+  font-family: 'Outfit', sans-serif; /* Changed font family to Outfit */
+  font-weight: 600; /* Set font weight to bold */
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.events p {
+  font-size: 19px;
+  color:#131517a3;
+  margin-bottom: 40px;
+}
+
+.eventCard {
+  display: flex;
+  align-items: center; /* Reverted alignment to center */
+  justify-content: space-between;
+  border-radius: 15px;
+  border: 1px solid rgba(248, 248, 248, 0.3); /* Updated stroke color to #F8F8F8 with 30% opacity */
+  border-width: 1px; /* Updated stroke weight to 1px */
+  padding: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 80px;
+  background-color: #FDFDFD;
+}
+
+.eventDate {
+  text-align: center;
+  font-weight: 600;
+  color: #131517a3;
+  margin-right: 20px;
+  border-right: 1px solid #EAEAEA; /* Reverted vertical divider color */
+  padding-right: 20px;
+  margin-left: 40px; 
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* Align May and 01 vertically */
+  justify-content: center; /* Re-centered the content */
+  line-height: 1; /* Ensures no space between May and 01 */
+  align-self: stretch; /* Reverted to stretch the vertical divider */
+  height: 200px; /* Reverted the height adjustment to its original state */
+}
+
+.eventDate .month {
+  font-size: 25px; /* Updated font size of May to 25px */
+  color: #333; /* Updated color to #FDFDFD */
+}  
+
+.eventDate .day {
+  font-size: 50px; /* Updated font size of 01 to 5px */
+  color: #333; /* Updated color to #FDFDFD */
+}
+
+.eventDate span {
+  font-size: 10px; /* Adjust font size to 5px for the day number in responsive */
+}
+
+.eventDetails {
+  text-align: left;
+  flex: 1;
+  padding: 0 30px;
+  color: #131517a3
+}
+
+.eventDetails h3 {
+  font-size: 20px; /* Updated font size to 25px */
+  font-family: 'Outfit', sans-serif; /* Changed font family to Outfit */
+  font-weight: 600; /* Set font weight to bold */
+  color: #333; /* Updated color to #F8F8F8 */
+  margin-bottom: 10px;
+}
+
+.eventDetails p {
+  font-size: 15px; /* Updated font size to 16px for the address text */
+  color: #1C1C1C;
+  margin: 5px 0;
+}
+
+.eventDetails p img {
+  width: 15px; /* Updated icon size to 15px */
+  height: 15px; /* Maintain aspect ratio with height set to 15px */
+}
+
+.eventDetails .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 60px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #035ada;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.eventDetails .btn:hover {
+  background-color: #005a9e;
+}
+
+.imagePlaceholder {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagePlaceholder img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 90px;
+  object-fit: cover; 
+  object-position: center; 
+}
+
+.transitionSection {
+  background-color: #091A2F;
+  height: auto; 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .events {
+    display: flex;
+    flex-direction: column; /* Stack events vertically */
+    align-items: center; /* Center align items */
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
+    overflow-x: hidden; /* Ensure no content overflows */
+  }
+
+  .events h2 {
+    font-size: 30px;
+  }
+
+  .events p {
+    font-size: 16px;
+  }
+
+  .event-card {
+    width: 90%; /* Ensure cards fit within the viewport */
+    margin: 0 auto 20px; /* Center the cards and add spacing */
+  }
+
+  .event-card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .event-card .content {
+    text-align: center; /* Center align text */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .imagePlaceholder {
+    display: none; /* Hide the image container on screens up to 1024px */
+  }
+}
+
+@media (max-width: 768px) {
+  .events {
+    flex-direction: column; /* Stack events vertically */
+    align-items: center; /* Center align items */
+    padding: 0 15px; /* Add smaller padding for mobile */
+  }
+
+  .events h2 {
+  font-size: 30px;
+  }
+
+  .event-card {
+    width: 100%; /* Make cards take up the full width of the screen */
+    margin-bottom: 15px; /* Add spacing between cards */
+  }
+
+  .events h2 {
+    padding-top: 30px;
+    font-size: 30px;
+  }
+
+  .events p {
+    font-size: 16px;
+  }
+
+  .event-card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .event-card .content {
+    text-align: center; /* Center align text */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .eventDate {
+    flex: 0 0 80px; 
+    text-align: center; 
+    margin-right: 10px; 
+    margin-left: -15px; 
+  }
+
+  .eventDetails {
+    flex: 1; /* Allow the details to take up the remaining space */
+    padding: 0 1px;
+  }
+
+  .eventDetails h3 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .eventDetails p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .eventDetails .btn {
+    margin-top: 10px;
+    padding: 10px 50px;
+    font-size: 1rem; /* Adjust button size for smaller screens */
+  }
+}

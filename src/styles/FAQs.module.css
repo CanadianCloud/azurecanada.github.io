@@ -1,0 +1,112 @@
+.faqs-container {
+  background-color: #FDFDFD; /* Light blue background */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 5px auto; /* Reduce the top margin of the FAQs container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faqs-title {
+  font-size: 2.5rem;
+  font-weight: 600; /* Semibold */
+  font-family: 'Outfit', sans-serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.faqs-description {
+  font-size: 20px;
+  font-weight: 400; /* Regular */
+  font-family: 'Outfit', sans-serif;
+  color: #131517a3;
+  margin-bottom: 50px;
+}
+
+.faqs-list details {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.faqs-list details .content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faqs-list details[open] .content {
+  grid-template-rows: 1fr;
+}
+
+.faqs-list details .content > div {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.faqs-list details[open] .content > div {
+  opacity: 1;
+  transition: opacity 0.35s ease 0.1s;
+}
+
+.faqs-list summary {
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500; 
+  color: #091A2F; 
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.faqs-list summary:hover {
+  color: #035ada /* Change title color on hover */
+}
+
+.faqs-list summary:hover .arrow-icon {
+  fill: #035ada; /* Change arrow color on hover */
+}
+
+details[open] summary {
+  color: #035ada; /* Keep title color when open */
+}
+
+details[open] .arrow-icon {
+  transform: rotate(135deg); /* Rotate to vertical when open */
+  fill: #035ada; /* Change arrow color when open */
+}
+
+.faqs-list p {
+  font-size: 17px;
+  color: #444;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.arrow-icon {
+  width: 16px; 
+  height: 16px;
+  margin-left: 8px; 
+  transform: rotate(45deg);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.faqsSection {
+  background-color: #f9f9f9; /* Updated background color to light gray */
+  width: 100%; /* Ensure it spans the full width */
+  padding: 100px 0; /* Add padding around the container */
+  box-sizing: border-box; /* Include padding in the total size */
+}
+
+@media (max-width: 768px) {
+  .faqs-title {
+    font-size: 30px; /* Ajusta el tamaño del título en responsive */
+  }
+  .faqs-description {
+    font-size: 17px; /* Ajusta el tamaño de la descripción en responsive */
+  }
+}
+

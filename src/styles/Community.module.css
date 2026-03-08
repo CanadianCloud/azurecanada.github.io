@@ -1,0 +1,61 @@
+.community {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* Black background */
+  padding: 50px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff; /* White background */
+  color: #333333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.blueCard {
+  background-color: #0078d4; /* Blue background */
+  color: #ffffff;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Tablet pequeño: 1 card on top, 2 on bottom */
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+  }
+
+  .card:first-child {
+    width: calc(50% - 10px);
+    margin: 0 auto 20px;
+    flex-basis: 100%;
+  }
+}

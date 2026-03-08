@@ -1,0 +1,146 @@
+/* Navigation.module.css */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav li a:hover {
+  color: #0078d4;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 0;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #0078d4;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Desktop: 1025px and up */
+@media (min-width: 1025px) {
+  .burger {
+    display: none !important;
+  }
+
+  .navLinks {
+    display: flex !important;
+  }
+}
+
+/* Mobile/Tablet: 1024px and down */
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    z-index: 15;
+    gap: 0;
+  }
+
+  .navLinks.active {
+    display: flex !important;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks li a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .burger {
+    display: flex !important;
+  }
+
+  .burger span {
+    background: #fff !important;
+  }
+}

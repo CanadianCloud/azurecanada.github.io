@@ -1,0 +1,198 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header.menuOpen {
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  z-index: 1101; /* appear above full-screen nav */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  width: 100%;
+}
+
+.logo {
+  height: 55px;
+  margin-right: auto;
+  position: relative;
+  z-index: 1102; /* stay above the nav overlay */
+  cursor: pointer;
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1102; /* same as logo to stay on top */
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  outline: none;
+}
+
+.burgerMenu:focus,
+.burgerMenu:active,
+.burgerMenu:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.navList li {
+  margin: 0;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navList li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0078d4;
+  transition: width 0.3s ease;
+}
+
+.navList li a:hover::after {
+  width: 100%;
+}
+
+.navList li a:hover {
+  color: #0078d4;
+}
+
+/* Desktop: 1025px and up */
+@media (min-width: 1025px) {
+  .burgerMenu {
+    display: none !important;
+  }
+
+  .nav {
+    display: flex !important;
+  }
+
+  .container {
+    padding: 20px 60px;
+  }
+}
+
+/* Mobile/Tablet: 1024px and down */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .burgerLine {
+    background-color: #fff !important;
+  }
+
+  .nav {
+    display: none !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 70px 30px 0; /* leave space for header */
+    min-width: unset;
+    z-index: 1000; /* below header */
+  }
+
+  .nav.navOpen {
+    display: flex !important;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0; /* header space already in nav padding */
+  }
+
+  .navList li {
+    width: 100%;
+  }
+
+  .navList li a {
+    display: block;
+    padding: 20px 0;
+    text-align: left;
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  .navList li a:hover {
+    background-color: rgba(0, 120, 212, 0.1);
+    padding-left: 10px;
+  }
+
+  .navList li a::after {
+    display: none;
+  }
+}    

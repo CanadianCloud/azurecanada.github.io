@@ -1,0 +1,95 @@
+.partners {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 80px 20px; /* Adjusted padding for spacing */
+  text-align: center;
+}
+
+.partners .container {
+  max-width: 1200px; /* Set the maximum width of the section */
+  margin: 0 auto; /* Center the container */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between text and logos */
+  align-items: center; /* Center align items vertically */
+  flex-direction: row; /* Align text and logos side by side */
+  text-align: center; /* Center align text */
+}
+
+.partners .title {
+  text-align: left; /* Align title to the left */
+  font-size: 2.5rem; /* Larger font size for the title */
+  font-weight: 600;
+  color: #333; /* Dark text color */
+  margin-bottom: 10px;
+}
+
+.partners .description {
+  text-align: left; /* Align description to the left */
+  font-size: 18px; /* Slightly larger font size for description */
+  color: #131517a3; /* Gray text color */
+  margin-bottom: 0; /* Remove bottom margin for better alignment */
+  max-width: 450px; /* Limit width for better readability */
+}
+
+.partners .partnerLogos {
+  display: flex;
+  justify-content: flex-end; /* Align logos to the right */
+  flex-wrap: wrap; /* Allow logos to wrap to the next line if needed */
+  gap: 20px; /* Add spacing between logos */
+  margin-top: 20px; /* Add space between text and logos */
+}
+
+.partners .logo {
+
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+  background: none; /* Remove the white rectangle */
+  padding: 0; /* Remove padding around logos */
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .partners .container {
+    flex-direction: column; /* Stack text and logos vertically */
+    text-align: center; /* Center align text */
+  }
+
+  .partners .partnerLogos {
+    justify-content: center; /* Center logos on smaller screens */
+    margin-top: 20px; /* Add spacing between text and logos */
+  }
+
+  .partners .title {
+    font-size: 30px; /* Reduce title size for smaller screens */
+  }
+
+  .partners .description {
+    font-size: 16px; /* Reduce description size for smaller screens */
+    max-width: 100%; /* Allow full width for better readability */
+    margin-bottom: 22px;
+  }
+
+  .partners .logo {
+    max-width: 80px; /* Reduce logo size for smaller screens */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .partners .container {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .partners .title {
+    font-size: 1.8rem; /* Further reduce title size */
+  }
+
+  .partners .description {
+    font-size: 14px; /* Further reduce description size */
+  }
+
+  .partners .logo {
+    max-width: 60px; /* Further reduce logo size */
+    margin: 5px; /* Reduce spacing between logos */
+  }
+}
