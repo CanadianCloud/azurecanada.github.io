@@ -12,5 +12,19 @@
     "venue": "Science World",
     "url": "https://lu.ma/cloudsummit26",
     "coverImage": "https://images.lumacdn.com/event-covers/ly/ce80f4ef-7b27-4f30-84d4-9253e7479b81.png"
+  },
+  {
+    "id": "evt-TxuBWVVEpfuOvFb",
+    "name": "After Party - Cloud Summit",
+    "description": "",
+    "date": "2026-05-02T02:30:00.000Z",
+    "month": "May",
+    "day": "02",
+    "year": 2026,
+    "time": "2:30 AM",
+    "location": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+    "venue": "Science World",
+    "url": "https://lu.ma/csparty",
+    "coverImage": "https://images.lumacdn.com/event-covers/uc/5ef45bc5-2c18-41f0-989e-7248b85ac7f7.png"
   }
 ]
