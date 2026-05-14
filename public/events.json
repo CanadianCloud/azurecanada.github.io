@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "evt-0gJCNhERwJBaliw",
+    "name": "Hacker Rivals Gathering",
+    "description": "",
+    "date": "2026-05-22T01:30:00.000Z",
+    "month": "May",
+    "day": "22",
+    "year": 2026,
+    "time": "1:30 AM",
+    "location": "Donnellan's Irish Pub, 1082 Granville St, Vancouver, BC V6Z 1L5, Canada",
+    "venue": "Donnellan's Irish Pub",
+    "url": "https://lu.ma/cloud-75qb",
+    "coverImage": "https://images.lumacdn.com/uploads/sb/73011fca-7228-4cf5-8c22-f73f380f70b8.png"
+  }
+]
