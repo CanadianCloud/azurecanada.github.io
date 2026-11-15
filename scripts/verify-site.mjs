@@ -23,6 +23,8 @@ try{
   assert.equal(await page.locator('.sponsor-logos img').count(),19);
   const overflow=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,cls:el.className?.baseVal??el.className,left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,text:el.textContent?.slice(0,65)})).filter(r=>r.right>innerWidth+1||r.left<-1));
   if(overflow.length)console.log('Overflow elements at '+width+': '+JSON.stringify(overflow));
+  console.log('Layout bounds '+JSON.stringify(await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth,body:document.body.scrollWidth}))));
+  assert.deepEqual(overflow,[],'Visible content must fit the viewport at '+width);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Horizontal overflow at '+width);
   const badAnchors=await page.locator('a[href^="#"]').evaluateAll(links=>links.filter(a=>!document.getElementById(a.hash.slice(1))).map(a=>a.hash));
   assert.deepEqual(badAnchors,[]);

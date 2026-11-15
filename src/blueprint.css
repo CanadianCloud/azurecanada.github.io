@@ -40,3 +40,6 @@ h1{font-size:clamp(52px,6vw,80px);font-weight:800;letter-spacing:-.035em;line-he
 
 /* Keep decorative drafting geometry inside its illustration area. */
 .technical-art{clip-path:inset(-8px)}
+
+/* The page is the drawing sheet: contain drafting marks at its edges. */
+.site-main{overflow-x:clip}
