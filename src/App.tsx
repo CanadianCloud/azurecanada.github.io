@@ -62,7 +62,7 @@ export default function App(){
  <main id="main" className="site-main">
   <section id="hero" className="hero"><div className="hero-art" role="img" aria-label="Blueprint illustration of Vancouver, its mountains, waterfront and Azure cloud"/><div className="hero-copy">
    <p className="eyebrow">AZURE CANADA <span>/</span> VANCOUVER</p>
-   <h1>Build something<br/>bigger.<br/>Together.</h1><div className="cyan-rule"/>
+   <h1>Build<br/>something<br/>bigger.<br/>Together.</h1><div className="cyan-rule"/>
    <p className="hero-description">The Vancouver community for Microsoft Azure. Learn, share, network, and build in person.</p>
    <div className="button-row"><Button href="#events">Find your next meetup</Button><Button href="#community" secondary>Join the community</Button></div>
   </div><span className="drawing-label" aria-hidden="true">VANCOUVER · BUILT TOGETHER</span></section>

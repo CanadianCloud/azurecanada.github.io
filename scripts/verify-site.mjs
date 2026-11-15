@@ -18,7 +18,7 @@ try{
   await page.setViewportSize({width,height:1000});
   await page.goto(base,{waitUntil:'networkidle'});
   await page.locator('.empty-event').waitFor();
-  assert.equal(await page.locator('h1').innerText(),'Build something\nbigger.\nTogether.');
+  assert.equal(await page.locator('h1').innerText(),'Build\nsomething\nbigger.\nTogether.');
   assert.equal(await page.locator('.faq-list details').count(),14);
   assert.equal(await page.locator('.sponsor-logos img').count(),19);
   const overflow=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,cls:el.className?.baseVal??el.className,left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,text:el.textContent?.slice(0,65)})).filter(r=>r.right>innerWidth+1||r.left<-1));
