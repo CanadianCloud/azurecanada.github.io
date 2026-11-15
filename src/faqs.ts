@@ -17,7 +17,7 @@ export default [
   },
   {
     "q": "What’s the difference between regular meetups and the big annual events?",
-    "a": "Regular meetups are smaller gatherings of around 50-100 people focused on community networking and learning. We also help host the large annual Cloud Summit Vancouver <a href=\"https://www.CloudSummit.ca\">www.CloudSummit.ca</a>."
+    "a": "Regular meetups are smaller gatherings of around 50-100 people focused on community networking and learning. We also help host the large annual Cloud Summit Vancouver <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.CloudSummit.ca\">www.CloudSummit.ca</a>."
   },
   {
     "q": "How can I volunteer?",
@@ -25,7 +25,7 @@ export default [
   },
   {
     "q": "What is involved in volunteering?",
-    "a": "It's up to you. Let us know what your skills are and we'll do our best to provide a rewarding experience. It could be as simple as greeting, or more complex like looking after the AV gear. It could even be helping online with the Discord channel, newsletter, website, etc."
+    "a": "It's up to you. Let us know what your skills are and we'll do our best to provide a rewarding experience. It could be as simple as greeting, or more complex like looking after the AV gear. It could even be helping online with the WhatsApp community, newsletter, website, etc."
   },
   {
     "q": "How can I give a talk?",

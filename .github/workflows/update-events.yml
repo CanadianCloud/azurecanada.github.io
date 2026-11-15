@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Test event sync
+        run: node --test scripts/luma-events.test.mjs
+
       - name: Run scraper
         run: node scripts/scrape-events.js
 
@@ -38,3 +41,20 @@ jobs:
           git add -f public/events.json
           git commit -m "chore: update events from Luma"
           git push
+
+      # Commits made with GITHUB_TOKEN do not trigger the push deployment workflow.
+      # Publish the refreshed event data as part of this scheduled run instead.
+      - name: Install dependencies
+        if: steps.git-check.outputs.changes == 'true'
+        run: npm ci
+
+      - name: Build refreshed site
+        if: steps.git-check.outputs.changes == 'true'
+        run: npm run build
+
+      - name: Deploy refreshed events
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
