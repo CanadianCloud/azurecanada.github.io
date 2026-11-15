@@ -27,7 +27,7 @@ try{
   const badImages=await page.locator('img').evaluateAll(async imgs=>{await Promise.all(imgs.map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));return imgs.filter(i=>!i.naturalWidth).map(i=>i.src);});
   assert.deepEqual(badImages,[]);
   if(width<=800){
-   const toggle=page.getByRole('button',{name:'Menu'});
+   const toggle=page.locator('.menu-toggle');
    await toggle.click();
    assert.equal(await toggle.getAttribute('aria-expanded'),'true');
    await page.locator('#main-navigation').getByRole('link',{name:'Events',exact:true}).click();
